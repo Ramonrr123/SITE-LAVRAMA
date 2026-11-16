@@ -111,9 +111,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .menu__group{display:flex;flex-direction:column;margin-bottom:24px}
 .menu__group a{display:flex;align-items:center;min-height:46px;font-size:19px;line-height:26px;letter-spacing:.3px}
 .menu__group a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
-.menu__small{display:flex;flex-direction:column;margin-top:12px}
-.menu__small a{display:flex;align-items:center;min-height:36px;font-size:14px;line-height:20px}
-.menu__small a:hover{text-decoration:underline;text-underline-offset:4px}
 .menu__foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 48px 24px;font-size:13px;line-height:18px}
 .switch{position:relative;width:40px;height:24px;border-radius:9999px;background:#8C857C;flex:none;transition:background .2s}
 .switch::after{content:"";position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .2s var(--ease)}
@@ -423,6 +420,8 @@ body.is-careers main{display:none}
 @media (min-width:900px){.dre{padding-top:88px}}
 @media (min-width:1024px){.dre__wrap{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center;min-height:calc(100svh - 88px);padding:32px var(--gutter)}.dre__intro{max-width:440px}.dre__y{font-size:36px;line-height:40px}.dre__row{padding:24px 28px;gap:8px 32px}}
 @media (min-width:1440px){.dre__wrap{gap:96px}.dre__intro{max-width:480px}}
+.menu__group{margin-bottom:32px}
+.menu__h{margin:0 0 8px}
 </style>
 </head>
 <body>
@@ -459,31 +458,25 @@ body.is-careers main{display:none}
     </button>
   </div>
   <nav class="menu__body" aria-label="Principal">
-    <div class="menu__group">
-      <a href="#selecao" data-close>Construção civil</a>
-      <a href="#selecao" data-close>Indústria moveleira</a>
-      <a href="#decoracao" data-close>Decoração</a>
-    </div>
-    <div class="menu__group">
-      <a href="#selecao" data-close>Compensado</a>
+    <div class="menu__group" role="group" aria-labelledby="mgP">
+      <p class="label muted menu__h" id="mgP">Produtos</p>
       <a href="#selecao" data-close>Molduras e rodapés</a>
-      <a href="#selecao" data-close>Quadros</a>
       <a href="#selecao" data-close>Painéis de pinus colado</a>
       <a href="#selecao" data-close>Tábuas aplainadas finger joint</a>
       <a href="#selecao" data-close>Batentes</a>
       <a href="#decoracao" data-close>Revestimento decorativo</a>
     </div>
-    <div class="menu__group">
+    <div class="menu__group" role="group" aria-labelledby="mgE">
+      <p class="label muted menu__h" id="mgE">Empresa</p>
       <a href="#lavrama" data-close>A Lavrama</a>
       <a href="#museu" data-close>Museu da Madeira</a>
       <a href="#associacoes" data-close>Associações e certificações</a>
-    </div>
-    <div class="menu__small">
-      <a href="#orcamento" data-close>Contato e orçamento</a>
-      <a href="#">Brasil · Português</a>
-      <a href="#lavrama" data-close>Ecológico</a>
-      <a href="#trabalhe-conosco" data-close>Trabalhe conosco</a>
       <a href="#demonstracoes" data-close>Demonstrações de resultados</a>
+    </div>
+    <div class="menu__group" role="group" aria-labelledby="mgC">
+      <p class="label muted menu__h" id="mgC">Contato</p>
+      <a href="#orcamento" data-close>Pedir orçamento</a>
+      <a href="#trabalhe-conosco" data-close>Trabalhe conosco</a>
     </div>
   </nav>
   <div class="menu__foot">
@@ -734,7 +727,7 @@ body.is-careers main{display:none}
       <div class="f"><label for="tel">Telefone</label><input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel"></div>
       <div class="f f--full"><label for="produto">Produto de interesse</label>
         <select id="produto" name="produto">
-          <option>Compensado</option><option>Molduras e rodapés</option><option>Quadros</option><option>Painéis de pinus colado</option>
+          <option>Molduras e rodapés</option><option>Painéis de pinus colado</option>
           <option>Tábuas aplainadas finger joint</option><option>Batentes</option><option>Revestimento decorativo</option><option>Outro</option>
         </select></div>
       <div class="f f--full"><label for="msg">Mensagem</label><textarea id="msg" name="msg" placeholder="Medidas, quantidade, destino da carga"></textarea></div>
@@ -832,7 +825,7 @@ body.is-careers main{display:none}
       <div>
         <h4 class="label">Produtos</h4>
         <ul>
-          <li><a href="#selecao">Compensado</a></li><li><a href="#selecao">Molduras e rodapés</a></li><li><a href="#selecao">Quadros</a></li>
+          <li><a href="#selecao">Molduras e rodapés</a></li>
           <li><a href="#selecao">Painéis de pinus colado</a></li><li><a href="#selecao">Tábuas finger joint</a></li><li><a href="#selecao">Batentes</a></li><li><a href="#decoracao">Revestimento decorativo</a></li>
         </ul>
       </div>
@@ -840,7 +833,7 @@ body.is-careers main{display:none}
         <h4 class="label">Empresa</h4>
         <ul>
           <li><a href="#lavrama">A Lavrama</a></li><li><a href="#lavrama">Ecológico</a></li><li><a href="#associacoes">Associações e certificações</a></li>
-          <li><a href="#demonstracoes">Demonstrações de resultados</a></li><li><a href="#">Notícias</a></li><li><a href="#trabalhe-conosco">Trabalhe conosco</a></li>
+          <li><a href="#demonstracoes">Demonstrações de resultados</a></li><li><a href="#trabalhe-conosco">Trabalhe conosco</a></li>
         </ul>
       </div>
       <div>
