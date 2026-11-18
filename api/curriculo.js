@@ -92,7 +92,7 @@ module.exports = async function handler(req, res) {
   }
 
   const to = process.env.CONTACT_TO_RH || 'ramon@lavrasul.com.br';
-  const from = process.env.RESEND_FROM || 'Lavrama <noreply@lavrasul.com.br>';
+  const from = process.env.RESEND_FROM || 'Lavrama <noreply@lavrama.com.br>';
   const text = [
     `Nome: ${nome}`,
     `E-mail: ${email}`,
