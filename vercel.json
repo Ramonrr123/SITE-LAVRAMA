@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "functions": {
+    "api/curriculo.js": {
+      "maxDuration": 15,
+      "memory": 1024
+    },
+    "api/orcamento.js": {
+      "maxDuration": 10
+    }
+  }
+}
