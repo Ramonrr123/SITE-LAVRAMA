@@ -62,8 +62,7 @@ module.exports = async function handler(req, res) {
     return json(res, 400, { ok: false, error: 'validation' });
   }
 
-  // Until lavrama.com.br is verified in Resend, destination must be the Resend account email.
-  const to = process.env.CONTACT_TO_SALES || 'lavrasul67@gmail.com';
+  const to = process.env.CONTACT_TO_SALES || 'ramon@lavrasul.com.br';
   const from = process.env.RESEND_FROM || 'Lavrama <onboarding@resend.dev>';
   const text = [
     `Nome: ${nome}`,

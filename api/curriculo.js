@@ -91,8 +91,7 @@ module.exports = async function handler(req, res) {
     return json(res, 413, { ok: false, error: 'file_too_large' });
   }
 
-  // Until domain is verified in Resend, destination must be the Resend account email.
-  const to = process.env.CONTACT_TO_RH || 'lavrasul67@gmail.com';
+  const to = process.env.CONTACT_TO_RH || 'ramon@lavrasul.com.br';
   const from = process.env.RESEND_FROM || 'Lavrama <onboarding@resend.dev>';
   const text = [
     `Nome: ${nome}`,
